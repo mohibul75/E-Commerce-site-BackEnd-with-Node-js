@@ -1,3 +1,4 @@
+
 const express = require('express');
 const app = express();
 const dotenv = require("dotenv");
@@ -11,9 +12,9 @@ const userRoute = require('./routes/user');
 dotenv.config();
 
 
-mongoose.connect('mongodb://localhost/my_db', { useNewUrlParser: true, useUnifiedTopology: true })
-    .then((result) => console.log('connection establisted with db'))
-    .catch((err) => console.log(err));
+mongoose.connect('mongodb+srv://purbo75:authorized123@cluster0.qgh5q.mongodb.net/my_db?retryWrites=true&w=majority' , { ssl: true ,sslValidate: false })
+.then((result) => console.log('connection establisted with db'))
+.catch((err) => console.log(err));
 
 app.use(cors());
 app.use(express.json());
