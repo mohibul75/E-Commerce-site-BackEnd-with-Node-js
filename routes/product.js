@@ -49,9 +49,11 @@ router.delete("/:id", verifyTokenAndAdmin, async (req, res) => {
 //GET PRODUCT
 router.get("/find/:id", async (req, res) => {
   try {
+    console.log('invoke here');
     const product = await Product.findById(req.params.id);
     res.status(200).json(product);
   } catch (err) {
+    console.log('invoke here2222344');
     res.status(500).json(err);
   }
 });
