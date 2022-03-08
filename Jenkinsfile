@@ -7,6 +7,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                sh'chown -R $(whoami) ~/.npm'
                 sh  'npm install pm2 -g'
             }
         }
