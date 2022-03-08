@@ -7,7 +7,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh'npm install'
+                sh'/usr/bin/npm install'
                 sh'npm install pm2 -g'
             }
         }
