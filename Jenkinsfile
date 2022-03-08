@@ -7,7 +7,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh'/home/ubuntu/.nvm/versions/node/v12.18.1/bin/npm install'
+                sh 'npm install'
                 sh'npm install pm2 -g'
             }
         }
