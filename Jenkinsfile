@@ -4,6 +4,13 @@ pipeline {
     
 
     stages {
+
+           stage("Checkout SCM"){
+            steps {
+                git credentialsId: 'purbo75', url: 'https://github.com/purbo75/E-Commerce-site-BackEnd-with-Node-js.git'
+            }
+        }
+
         stage('Build') {
             steps {
                 echo 'Building..'
