@@ -14,6 +14,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                sh'npm install'
+                sh'npm install pm2 -g'
                
             }
         }
@@ -25,7 +27,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh'node index.js'
+                sh'pm2 start index.js'
             }
         }
     }
