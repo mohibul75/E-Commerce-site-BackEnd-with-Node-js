@@ -25,7 +25,6 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh'fuser -k 5000/tcp'
                 sh'node index.js'
             }
         }
