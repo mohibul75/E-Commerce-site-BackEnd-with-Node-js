@@ -14,7 +14,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh'/var/jenkins_home/npm install'
+                sh'/var/jenkins_home/nodes/npm install'
                 sh'npm install pm2 -g'
                
             }
