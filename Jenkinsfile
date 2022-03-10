@@ -15,7 +15,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh'node -v'
-                sh'/usr/local/bin/npm install'
+                sh'/usr/bin/npm install'
                 sh'npm install pm2 -g'
                
             }
