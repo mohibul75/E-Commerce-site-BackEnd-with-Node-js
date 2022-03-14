@@ -25,6 +25,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+                sh'pm2 stop index'
                 sh'pm2 delete index'
                 sh'pm2 start index.js --watch'
             }
